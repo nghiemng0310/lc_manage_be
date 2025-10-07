@@ -14,4 +14,15 @@ namespace lcManage.Models
         INACTIVE = 1,
 
     }
+
+    public enum RoleEnum
+    {
+        [Description("Học viên")]
+        [EnumMember(Value = "STUDENT")]
+        STUDENT = 0,
+
+        [Description("Giáo viên")]
+        [EnumMember(Value = "TEACHER")]
+        TEACHER = 1,
+    }
 }

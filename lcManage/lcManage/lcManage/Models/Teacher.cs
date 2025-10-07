@@ -2,7 +2,7 @@
 
 namespace lcManage.Models
 {
-    public class Student: BaseObject
+    public class Teacher: BaseObject
     {
         [Key]
         public int Id { get; set; }
@@ -13,14 +13,12 @@ namespace lcManage.Models
         public DateTime DateOfBirth { get; set; }
 
         public StatusEnum Status { get; set; }
-
-        public void UpdateModel(Student source)
+        public void UpdateModel(Teacher source)
         {
             FullName = source.FullName;
             Address = source.Address;
             DateOfBirth = source.DateOfBirth;
             Status = source.Status;
         }
-
     }
 }

@@ -1,4 +1,6 @@
 ﻿using lcManage;
+using lcManage.ServiceInterfaces;
+using lcManage.Services;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -11,6 +13,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+builder.Services.AddScoped<ISubjectService, SubjectService>();
 
 var app = builder.Build();
 
